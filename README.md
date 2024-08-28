@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://sametsahin.net/"><img src="https://sametsahin.net/images/collect-vars.svg" alt="collectvars" width="200" height="200"></a>
+  <a href="https://sametsahin.net/"><img src="/img/collectvars-256.png" alt="collectvars" width="256" height="256"></a>
   <br>
   collectvars
   <br>
