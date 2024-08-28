@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "collectvars",
+  "version": "1.337",
+  "description": "collectvars collects JavaScript variables, highlights risky ones, and helps you understand code structure, while you casually browse.",
+  "permissions": ["activeTab", "scripting", "storage"],
+
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_badge_text": "0"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js", "list/watchlist.txt", "list/denylist.txt"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "icons": {
+    "16": "img/collectvars-16.png",
+    "32": "img/collectvars-32.png",
+    "48": "img/collectvars-48.png",
+    "128": "img/collectvars-128.png"
+  }
+}

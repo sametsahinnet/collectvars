@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>collectvars</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <button class="nav-item active" id="globalVarsBtn">
+          Current page<span
+            class="red-dot"
+            id="globalRedDot"
+            style="display: none"
+          ></span>
+        </button>
+        <button class="nav-item" id="externalVarsBtn">
+          External scripts<span
+            class="red-dot"
+            id="externalRedDot"
+            style="display: none"
+          ></span>
+        </button>
+      </nav>
+
+      <div id="currentUrl" class="current-url"></div>
+
+      <div id="resultArea" class="result-area"></div>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search variables and values..."
+      />
+
+      <div class="toggle-group">
+        <label class="toggle">
+          <span class="toggle-label">Display variable values</span>
+          <input type="checkbox" id="toggle3" />
+          <span class="toggle-switch"></span>
+        </label>
+        <label class="toggle">
+          <span class="toggle-label">Highlight dangerous variables</span>
+          <input type="checkbox" id="toggle1" />
+          <span class="toggle-switch"></span>
+        </label>
+        <label class="toggle">
+          <span class="toggle-label">Ignore common libraries</span>
+          <input type="checkbox" id="toggle2" />
+          <span class="toggle-switch"></span>
+        </label>
+        <label class="toggle">
+          <span class="toggle-label">Ignore short variables</span>
+          <input type="checkbox" id="toggle4" />
+          <span class="toggle-switch"></span>
+        </label>
+      </div>
+
+      <div class="button-group">
+        <button id="copyBtn" style="font-weight: bold">Copy</button>
+        <button id="resetBtn" style="font-weight: bold">Reset</button>
+      </div>
+
+      <footer>
+        <p>
+          <b
+            ><a
+              href="https://github.com/sametsahinnet/collectvars"
+              style="color: #45caff"
+              target="_blank"
+              >collectvars</a
+            >
+            by
+            <a
+              href="https://sametsahin.net/"
+              style="color: #45caff"
+              target="_blank"
+              >@sametsahinnet</a
+            ></b
+          >
+        </p>
+      </footer>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
